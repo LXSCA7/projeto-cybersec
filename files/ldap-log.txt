@@ -1,0 +1,36 @@
+ldapsearch -x -H ldap://10.10.30.17 -b "dc=example,dc=org"
+
+# extended LDIF
+#
+# LDAPv3
+# base <dc=example,dc=org> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# search result
+search: 2
+result: 32 No such object
+
+# numResponses: 1
+
+┌──(root㉿486ef7dc9d31)-[/home/analyst]
+└─# ldapsearch -x -H ldap://10.10.30.17 -s base "(objectclass=*)" namingContexts
+# extended LDIF
+#
+# LDAPv3
+# base <> (default) with scope baseObject
+# filter: (objectclass=*)
+# requesting: namingContexts 
+#
+
+#
+dn:
+namingContexts: dc=example,dc=org
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 2
+# numEntries: 1
