@@ -111,3 +111,54 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done at Sun Jul 27 17:43:15 2025 -- 5 IP addresses (5 hosts up) scanned in 28.68 seconds
 
 # Scan infra:
+
+Nmap scan report for 10.10.50.1
+Host is up (0.000095s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE SERVICE    VERSION
+5432/tcp open  postgresql PostgreSQL DB 9.6.0 or later
+MAC Address: B6:76:F1:F3:35:0A (Unknown)
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.19, OpenWrt 21.02 (Linux 5.4)
+Network Distance: 1 hop
+
+Nmap scan report for laptop-luiz.projeto_final_opcao_1_guest_net (10.10.50.2)
+Host is up (0.000067s latency).
+All 65535 scanned ports on laptop-luiz.projeto_final_opcao_1_guest_net (10.10.50.2) are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
+MAC Address: B6:2B:E8:F4:BE:DB (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for macbook-aline.projeto_final_opcao_1_guest_net (10.10.50.3)
+Host is up (0.000031s latency).
+All 65535 scanned ports on macbook-aline.projeto_final_opcao_1_guest_net (10.10.50.3) are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
+MAC Address: B6:A8:D7:CB:A3:C9 (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for laptop-vastro.projeto_final_opcao_1_guest_net (10.10.50.4)
+Host is up (0.000027s latency).
+All 65535 scanned ports on laptop-vastro.projeto_final_opcao_1_guest_net (10.10.50.4) are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
+MAC Address: 2A:E5:A0:7B:D1:47 (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for notebook-carlos.projeto_final_opcao_1_guest_net (10.10.50.5)
+Host is up (0.000031s latency).
+All 65535 scanned ports on notebook-carlos.projeto_final_opcao_1_guest_net (10.10.50.5) are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
+MAC Address: 22:1D:48:58:02:8B (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for fc6bd504ab03 (10.10.50.6)
+Host is up (0.000058s latency).
+All 65535 scanned ports on fc6bd504ab03 (10.10.50.6) are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
