@@ -122,6 +122,10 @@ result: 0 Success
 
 A análise de segurança revelou uma arquitetura de rede fundamentalmente insegura, com falhas de segmentação que expõem os ativos mais críticos da organização a riscos imediatos. Embora existam pontos positivos, como o hardening das estações de trabalho, eles são ofuscados pela exposição sistêmica dos servidores. A implementação do plano de ação, começando pela re-segmentação da rede, é mandatória para estabelecer um nível mínimo de segurança e proteger a empresa contra comprometimentos.
 
+## Ferramentas auxiliares:
+- Gemini: Utilizado para auxiliar na criação do relatório.
+- Mermaid Chart: Utilizado na criação dos diagramas de arquitetura de rede (Estado Atual e Recomendado).
+
 ## Outros Anexos
 - [Saídas completas dos scans do Nmap (`scan-corp.txt`, `scan-guest.txt`, `scan-infra.txt`)](files/scans.md);
 - [Logs sbmclient](files/smbclient-log.txt);
