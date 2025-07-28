@@ -1,8 +1,10 @@
-# Relatório Técnico de Análise de Segurança – Lab Segmentação de Rede
+# Relatório Técnico de Análise de Segurança - Projeto Técnico: Mapeamento de Rede Corporativa – Lab Docker
 
 **Autor:** Lucas Rocha
+
 **Data:** 27 de julho de 2025
-**Versão:** 1.1
+
+**Versão:** 1.2
 
 ## Sumário Executivo
 
@@ -96,6 +98,28 @@ result: 0 Success
 - **Evidência:** O scan da rede `corp_net` mostrou todos os 65535 ports em estado "closed/ignored".
 
 ![Scan corp](images/scan-corp.png)
+
+# Inventário Técnico de Ativos de Rede
+
+Este inventário consolida todos os ativos descobertos e seus respectivos estados nas redes `corp_net`, `guest_net` e `infra_net`.
+
+| Sub-rede | IP | Hostname (Detectado) | Sistema Operacional (Detectado) | Portas Abertas / Serviços e Versões | Observação Principal / Risco |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **corp_net** | 10.10.10.10 | `WS_001` | N/A | Nenhuma porta TCP aberta | **Positivo:** Estação de trabalho com firewall de host bem configurado. |
+| **corp_net** | 10.10.10.101 | `WS_002` | N/A | Nenhuma porta TCP aberta | **Positivo:** Estação de trabalho com firewall de host bem configurado. |
+| **corp_net** | 10.10.10.127 | `WS_003` | N/A | Nenhuma porta TCP aberta | **Positivo:** Estação de trabalho com firewall de host bem configurado. |
+| **corp_net** | 10.10.10.222 | `WS_004` | N/A | Nenhuma porta TCP aberta | **Positivo:** Estação de trabalho com firewall de host bem configurado. |
+| | | | | | |
+| **guest_net** | 10.10.30.10 | `ftp-server` | Linux 4.X/5.X | `21/tcp` (Pure-FTPd) | **CRÍTICO:** Servidor na rede errada. Protocolo FTP inseguro. |
+| **guest_net** | 10.10.30.11 | `mysql-server` | Linux 4.X/5.X | `3306/tcp` (MySQL 8.0.43)<br>`33060/tcp` (MySQL X) | **CRÍTICO:** Servidor de banco de dados na rede errada. |
+| **guest_net** | 10.10.30.15 | `samba-server` | Linux 4.X/5.X | `139/tcp` (Samba smbd 4)<br>`445/tcp` (Samba smbd 4) | **CRÍTICO:** Servidor de arquivos na rede errada. |
+| **guest_net** | 10.10.30.17 | `openldap` | Linux 4.X/5.X | `389/tcp` (OpenLDAP 2.2.X-2.3.X)<br>`636/tcp` (ldapssl?) | **CRÍTICO:** Servidor de autenticação na rede errada. Software obsoleto. |
+| **guest_net** | 10.10.30.117 | `zabbix-server`| Linux 4.X/5.X | `80/tcp` (nginx)<br>`10051/tcp` (zabbix-trapper?)<br>`10052/tcp` (unknown) | **CRÍTICO:** Servidor de monitoramento na rede errada. |
+| | | | | | |
+| **infra_net** | 10.10.50.2 | `laptop-luiz` | N/A | Nenhuma porta TCP aberta | **CRÍTICO:** Dispositivo pessoal na rede de infraestrutura. |
+| **infra_net** | 10.10.50.3 | `macbook-aline`| N/A *porém, possivelmente MacOS* | Nenhuma porta TCP aberta | **CRÍTICO:** Dispositivo pessoal na rede de infraestrutura. |
+| **infra_net** | 10.10.50.4 | `laptop-vastro`| N/A | Nenhuma porta TCP aberta | **CRÍTICO:** Dispositivo pessoal na rede de infraestrutura. |
+| **infra_net** | 10.10.50.5 | `notebook-carlos`| N/A | Nenhuma porta TCP aberta | **CRÍTICO:** Dispositivo pessoal na rede de infraestrutura. |
 
 ## Recomendações
 
